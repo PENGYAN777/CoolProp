@@ -30,7 +30,7 @@ ex = pd.read_csv("ex_p.csv", "  ", skiprows=0)
 # plot (M,Z)
 fig1 = plt.figure( dpi=300)
 axes = fig1.add_axes([0.15, 0.15, 0.7, 0.7]) #size of figure
-axes.plot(cp_euler.iloc[:,4]*1000 , cp_euler.iloc[:,1]/9.02e5, 'k', lw=2, label="CoolProp Euler")
+axes.plot(cp_euler.iloc[:,5]*1000 , cp_euler.iloc[:,2]/9.02e5, 'k', lw=2, label="CoolProp Euler")
 axes.plot(cp_rans.iloc[:,4]*1000 , cp_rans.iloc[:,1]/9.02e5, 'r', lw=2, label="CoolProp RANS")
 axes.plot(ex.iloc[:,0]*1000 , ex.iloc[:,1]/9.02e5, 'ko', lw=2, label="experiment")
 
