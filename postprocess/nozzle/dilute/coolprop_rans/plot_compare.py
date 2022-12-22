@@ -20,10 +20,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 
-
+m0 = pd.read_csv("mesh0.csv", ",", skiprows=0)
 m1 = pd.read_csv("mesh1.csv", ",", skiprows=0)
 m2 = pd.read_csv("mesh2.csv", ",", skiprows=0)
-m3 = pd.read_csv("mesh3.csv", ",", skiprows=0)
 
 
 
@@ -33,9 +32,10 @@ m3 = pd.read_csv("mesh3.csv", ",", skiprows=0)
 fig1 = plt.figure( dpi=300)
 lwh = 2
 axes = fig1.add_axes([0.15, 0.15, 0.7, 0.7]) #size of figure
-axes.plot(m1.iloc[:,4]*1000 , m1.iloc[:,2], 'k', lw=lwh, label="n=6k")
-axes.plot(m2.iloc[:,4]*1000 , m2.iloc[:,2], 'r', lw=lwh, label="n=12k")
-axes.plot(m3.iloc[:,4]*1000 , m3.iloc[:,2], 'g', lw=lwh, label="n=22k")
+axes.plot(m0.iloc[:,4]*1000 , m0.iloc[:,2], 'k', lw=lwh, label="n=4k")
+axes.plot(m1.iloc[:,4]*1000 , m1.iloc[:,2], 'r', lw=lwh, label="n=11k")
+axes.plot(m2.iloc[:,4]*1000 , m2.iloc[:,2], 'g', lw=lwh, label="n=19k")
+
 
 
 axes.set_xlabel('$X[mm]$',fontsize=12)
@@ -48,5 +48,5 @@ axes.legend(loc=6) #
 # axes.set_xlim(0,120)
 # axes.set_ylim(0.2,1)
 #axes.legend(loc=2) # 2 means left top
-fig1.savefig("nozzle_di_ce_gv.pdf")
+fig1.savefig("nozzle_di_cr_gv.pdf")
 
