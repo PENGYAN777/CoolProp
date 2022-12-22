@@ -26,7 +26,7 @@ axes.set_xlabel('$X[mm]$',fontsize=12)
 #axes.set_yscale("log")
 axes.set_ylabel('$Y[mm]$',fontsize=12) 
 
-axes.set_title('Geometry of nozzle M2.0',fontsize=14)
+axes.set_title('Geometry of nozzle M1.5',fontsize=14)
 
 axes.legend(loc=1) # 
 # axes.set_xlim(0,0.12)
