@@ -25,10 +25,10 @@ axes.plot(sym.iloc[:,0]*1000  , sym.iloc[:,1]*1000 , 'b', lw=2, label="symmetry"
 axes.set_xlabel('$X[mm]$',fontsize=12)
 #axes.set_yscale("log")
 axes.set_ylabel('$Y[mm]$',fontsize=12) 
-
+axes.set_aspect('equal', 'box')
 axes.set_title('Geometry of nozzle M1.5',fontsize=14)
 
-axes.legend(loc=1) # 
+axes.legend(loc=1 , prop={'size': 6}) # 
 # axes.set_xlim(0,0.12)
 # axes.set_ylim(0.2,1)
 #axes.legend(loc=2) # 2 means left top
