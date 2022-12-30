@@ -25,6 +25,8 @@ coolprop_euler = pd.read_csv("../coolprop_euler/mesh3.csv", ",", skiprows=0)
 coolprop_rans = pd.read_csv("../coolprop_rans/coolprop_rans.csv", ",", skiprows=0)
 pr_euler = pd.read_csv("../pr_euler/pr.csv", ",", skiprows=0)
 pr_rans = pd.read_csv("../pr_rans/pr_rans.csv", ",", skiprows=0)
+fp_euler = pd.read_csv("../fp_euler/fp_euler.csv", ",", skiprows=0)
+fp_rans = pd.read_csv("../fp_rans/fp_rans.csv", ",", skiprows=0)
 nimoc_euler = pd.read_csv("../NIMOC/NIMOC_lower_boundary.csv", ",", skiprows=0)
 ex = pd.read_csv("ex_p.csv", "  ", skiprows=0)
 
@@ -39,6 +41,8 @@ axes.plot(coolprop_euler.iloc[:,5]*1000 , coolprop_euler.iloc[:,3], 'k', lw=lwh,
 axes.plot(coolprop_rans.iloc[:,4]*1000 , coolprop_rans.iloc[:,2], 'k--', lw=lwh, label="SU2 CoolProp RANS")
 axes.plot(pr_euler.iloc[:,4]*1000 , pr_euler.iloc[:,2], 'r', lw=lwh, label="SU2 PR Euler")
 axes.plot(pr_rans.iloc[:,4]*1000 , pr_rans.iloc[:,2], 'r--', lw=lwh, label="SU2 PR RANS")
+axes.plot(fp_euler.iloc[:,11]*1000 , fp_euler.iloc[:,8], 'b', lw=lwh, label="SU2 FluidProp Euler")
+axes.plot(fp_rans.iloc[:,19]*1000 , fp_rans.iloc[:,15], 'b--', lw=lwh, label="SU2 FluidProp RANS")
 axes.plot(nimoc_euler.iloc[:,1]*1000+86.4 , nimoc_euler.iloc[:,9]/9.04e5, 'g', lw=lwh, label="NIMOC Coolrop Euler")
 
 plt.errorbar(ex.iloc[:,0]*1000, ex.iloc[:,1]/9.04e5, ex.iloc[:,2]/9.04e5, fmt=' ', marker='o',mfc='black', 

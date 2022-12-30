@@ -44,18 +44,19 @@ for i in range(P.size):
 fig1 = plt.figure( dpi=300)
 lwh = 2
 axes = fig1.add_axes([0.15, 0.15, 0.7, 0.7]) 
-axes.plot(x, M, 'ko', lw=lwh, label="CoolProp")
+axes.plot(x, s, 'k', lw=lwh, label="CoolProp")
 
-axes2 = axes.twinx()
-axes2.plot(x, nimoc.iloc[:,6], 'r', lw=lwh, label="NIMOC")
+# axes2 = axes.twinx()
+# axes2.plot(x, nimoc.iloc[:,5], 'r', lw=lwh, label="NIMOC")
 
 
 axes.set_xlabel('$X[mm]$',fontsize=12)
-axes.set_ylabel('Mach number',fontsize=12) 
-axes2.set_ylabel('Mach number', fontsize=12) 
-axes2.yaxis.label.set_color('red')
+axes.set_ylabel('s',fontsize=12) 
+# axes2.set_ylabel('c', fontsize=12) 
+# axes2.yaxis.label.set_color('red')
 axes.legend(loc=2) # 
-axes2.legend(loc=4) # 
+axes.set_ylim([800, 900])
+# axes2.legend(loc=4) # 
 
-axes.set_title('Mach number along centerline',fontsize=14)
-fig1.savefig("Coolprop.pdf")
+axes.set_title('Speed of sound along centerline',fontsize=14)
+fig1.savefig("s.pdf")
