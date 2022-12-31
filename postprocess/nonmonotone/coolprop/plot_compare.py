@@ -24,8 +24,10 @@ from IPython import get_ipython;
 get_ipython().magic('reset -sf')
 os.system('clear')
 
-mesh1= pd.read_csv("mesh1.csv", ",", skiprows=0)
-mesh2= pd.read_csv("mesh2.csv", ",", skiprows=0)
+mesh1= pd.read_csv("m1.csv", ",", skiprows=0)
+mesh2= pd.read_csv("m2.csv", ",", skiprows=0)
+mesh3= pd.read_csv("m3.csv", ",", skiprows=0)
+mesh4= pd.read_csv("m4.csv", ",", skiprows=0)
 
 
 
@@ -37,8 +39,10 @@ mesh2= pd.read_csv("mesh2.csv", ",", skiprows=0)
 fig1 = plt.figure( dpi=300)
 lwh = 2
 axes = fig1.add_axes([0.15, 0.15, 0.7, 0.7]) #size of figure
-axes.plot(mesh1.iloc[:,4] , mesh1.iloc[:,0], 'k', lw=lwh, label="1.5k")
-axes.plot(mesh2.iloc[:,4] , mesh2.iloc[:,0], 'r', lw=lwh, label="6k")
+axes.plot(mesh1.iloc[:,4] , mesh1.iloc[:,0], 'k', lw=lwh, label="2k")
+axes.plot(mesh2.iloc[:,4] , mesh2.iloc[:,0], 'r', lw=lwh, label="4k")
+axes.plot(mesh3.iloc[:,4] , mesh3.iloc[:,0], 'g', lw=lwh, label="8k")
+axes.plot(mesh4.iloc[:,5] , mesh4.iloc[:,0], 'b', lw=lwh, label="18k")
 
 
 axes.set_xlabel('$X[mm]$',fontsize=12)

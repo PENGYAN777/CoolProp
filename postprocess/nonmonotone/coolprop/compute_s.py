@@ -13,7 +13,7 @@ import CoolProp as CP
 import pandas as pd
 
 fluidname = "MM"
-data = pd.read_csv("mesh3.csv", ",")
+data = pd.read_csv("m4.csv", ",")
 # get P,T from 2nd and 3rd column 
 P = data.iloc[:,1] 
 T = data.iloc[:,2] 
@@ -33,4 +33,4 @@ sh =pd.DataFrame({'entropy': s, 'total enthalpt': ht })
 newData = pd.concat([data, sh], join = 'outer', axis = 1)
 
 # save newData in csv file
-newData.to_csv("mesh2.csv")
+newData.to_csv("m4s.csv")

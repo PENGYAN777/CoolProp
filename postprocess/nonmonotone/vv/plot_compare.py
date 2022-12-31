@@ -25,12 +25,8 @@ get_ipython().magic('reset -sf')
 os.system('clear')
 
 pr= pd.read_csv("../pr/pr.csv", ",", skiprows=0)
+cp= pd.read_csv("../coolprop/m4.csv", ",", skiprows=0)
 nimoc= pd.read_csv("NIMOC_lower_boundary.csv", ",", skiprows=0)
-
-
-
-
-
 
 
 # fig 1
@@ -39,18 +35,23 @@ lwh = 2
 axes = fig1.add_axes([0.15, 0.15, 0.7, 0.7]) #size of figure
 axes.plot(pr.iloc[:,5] , pr.iloc[:,0], 'k', lw=lwh, label="SU2 PR")
 axes.plot(nimoc.iloc[:,1] , nimoc.iloc[:,6], 'r', lw=lwh, label="NIMOC CoolProp")
+axes.plot(cp.iloc[:,4] , cp.iloc[:,0], 'g', lw=lwh, label="SU2 CoolProp")
 
+axes2 = axes.twinx()
+axes2.plot(pr.iloc[:,5] , pr.iloc[:,1], 'k--', lw=lwh, label="SU2 PR")
+axes2.plot(nimoc.iloc[:,1] , nimoc.iloc[:,9], 'r--', lw=lwh, label="NIMOC CoolProp")
+axes2.plot(cp.iloc[:,4] , cp.iloc[:,1], 'g--', lw=lwh, label="SU2 CoolProp")
 
 axes.set_xlabel('$X[mm]$',fontsize=12)
 #axes.set_yscale("log")
 # axes.set_ylabel('$P/P_t$',fontsize=12) 
 axes.set_ylabel('$Mach number',fontsize=12) 
-
+axes2.set_ylabel('$Pressure[Pa]',fontsize=12) 
 axes.set_title('Mach number along centerline',fontsize=14)
 
 axes.legend(loc=2) # 
-# axes.set_xlim(0,7)
+# axes.set_xlim(-12,7)
 # axes.set_ylim(0.2,1)
-#axes.legend(loc=2) # 2 means left top
+# axes2.legend(loc=4) # 2 means left top
 fig1.savefig("nonmonotone_vv.pdf")
 
