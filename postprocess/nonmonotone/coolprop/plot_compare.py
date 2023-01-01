@@ -39,16 +39,16 @@ mesh4= pd.read_csv("m4.csv", ",", skiprows=0)
 fig1 = plt.figure( dpi=300)
 lwh = 2
 axes = fig1.add_axes([0.15, 0.15, 0.7, 0.7]) #size of figure
-axes.plot(mesh1.iloc[:,4] , mesh1.iloc[:,0], 'k', lw=lwh, label="2k")
-axes.plot(mesh2.iloc[:,4] , mesh2.iloc[:,0], 'r', lw=lwh, label="4k")
-axes.plot(mesh3.iloc[:,4] , mesh3.iloc[:,0], 'g', lw=lwh, label="8k")
-axes.plot(mesh4.iloc[:,5] , mesh4.iloc[:,0], 'b', lw=lwh, label="18k")
+axes.plot(mesh1.iloc[:,9] , mesh1.iloc[:,1], 'k', lw=lwh, label="2k")
+axes.plot(mesh2.iloc[:,9] , mesh2.iloc[:,1], 'r', lw=lwh, label="4k")
+axes.plot(mesh3.iloc[:,9] , mesh3.iloc[:,1], 'g', lw=lwh, label="8k")
+axes.plot(mesh4.iloc[:,9] , mesh4.iloc[:,1], 'b', lw=lwh, label="18k")
 
 
 axes.set_xlabel('$X[mm]$',fontsize=12)
 #axes.set_yscale("log")
 # axes.set_ylabel('$P/P_t$',fontsize=12) 
-axes.set_ylabel('$Mach number',fontsize=12) 
+axes.set_ylabel('Mach number',fontsize=12) 
 
 axes.set_title('Mach number along centerline',fontsize=14)
 
