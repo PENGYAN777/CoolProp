@@ -41,7 +41,7 @@ axes.set_xlabel('$X[mm]$',fontsize=12)
 #axes.set_yscale("log")
 # axes.set_ylabel('$P/P_t$',fontsize=12) 
 axes.set_ylabel('Mach number',fontsize=12) 
-axes.set_title('Mach numberalong centerline',fontsize=14)
+axes.set_title('Mach number along centerline',fontsize=14)
 
 axes.legend(loc=6,fontsize=8) 
 # axes.set_xlim(-12,7)
