@@ -26,7 +26,7 @@ axes.set_xlabel('$X[mm]$',fontsize=12)
 #axes.set_yscale("log")
 axes.set_ylabel('$Y[mm]$',fontsize=12) 
 axes.set_aspect('equal', 'box')
-axes.set_title('Geometry of nozzle for non-monotone Mach number',fontsize=14)
+# axes.set_title('Geometry of nozzle for non-monotone Mach number',fontsize=14)
 
 axes.legend(loc=9 , prop={'size': 8}) # 
 # axes.set_xlim(0,8)

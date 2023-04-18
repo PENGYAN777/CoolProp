@@ -45,8 +45,8 @@ axes.set_ylabel('Residuals',fontsize=12)
 axes.set_title('History of residuals',fontsize=14)
 
 axes.legend(loc=0) # 
-axes.set_xlim(0,700)
-axes.set_ylim(-12,3)
+# axes.set_xlim(0,700)
+axes.set_ylim(-12,6)
 #axes.legend(loc=2) # 2 means left top
-fig1.savefig("nozzle_di_ce_residual.pdf")
+fig1.savefig("shock_residual.pdf")
 

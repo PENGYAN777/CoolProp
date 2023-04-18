@@ -61,7 +61,7 @@ for i in range(nn):
                     ex.iloc[i,1]/9.04e5)
 
 ax2.plot(ex.iloc[0:4,0]*1000, (dmax-dmin)/dmax*100 , 'k*', lw=lwh)    
-ax2.set_ylabel('$\Delta$(%)',fontsize=12) 
+ax2.set_ylabel('$\Delta_{P/P_t}$(%)',fontsize=12) 
 ax2.set_ylim(0,5)
 axes.set_xlabel('$X[mm]$',fontsize=12)
 #axes.set_yscale("log")

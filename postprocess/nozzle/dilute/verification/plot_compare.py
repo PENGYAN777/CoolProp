@@ -47,7 +47,7 @@ for i in range(nn):
     dmin[i] = min(pig_euler.iloc[i,2],pig_rans.iloc[i,2],coolprop_euler.iloc[i,2],coolprop_rans.iloc[i,2])
    
 ax2.plot(pig_euler.iloc[:,4]*1000, (dmax-dmin)/dmax*100 , 'k*', lw=lwh)    
-ax2.set_ylabel('$\Delta$(%)',fontsize=12) 
+ax2.set_ylabel('$\Delta_{P/P_t}$(%)',fontsize=12) 
 ax2.set_ylim(0,4)
 axes.set_xlabel('$X[mm]$',fontsize=12)
 #axes.set_yscale("log")
