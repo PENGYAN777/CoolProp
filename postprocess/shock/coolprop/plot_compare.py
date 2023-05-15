@@ -29,7 +29,7 @@ mesh3= pd.read_csv("m0.csv", ",", skiprows=0)
 mesh4= pd.read_csv("m2.csv", ",", skiprows=0)
 mesh5= pd.read_csv("m3.csv", ",", skiprows=0)
 mesh6= pd.read_csv("m4.csv", ",", skiprows=0)
-m6new = pd.read_csv("prnew.csv", ",", skiprows=0)
+m4new = pd.read_csv("m4new.csv", ",", skiprows=0)
 
 
 
@@ -46,8 +46,10 @@ axes.plot(mesh6.iloc[:,-3] , mesh6.iloc[:,6]/1499900, 'b', lw=lwh, label="30k")
 
 sub_axes = plt.axes([0.26, 0.26, 0.25, 0.25]) 
 
-sub_axes.plot(m6new.iloc[:,6] , m6new.iloc[:,-3], 'k', lw=lwh, label="$s$")
+# sub_axes.plot(m6new.iloc[:,6] , m6new.iloc[:,-3], 'k', lw=lwh, label="$s$")
+sub_axes.plot(m4new.iloc[:,11] , m4new.iloc[:,-3], 'k', lw=lwh, label="$s$")
 sub_axes.set_ylabel('$s[J/K/mol]$',fontsize=10) 
+sub_axes.set_ylim([754.5, 760])
 
 axes.set_xlabel('$X[mm]$',fontsize=12)
 axes.set_ylabel('$P/P_t$',fontsize=12) 

@@ -16,12 +16,9 @@ fluidname = "HEOS::MDM"
 Tc =  CP.CoolProp.PropsSI("Tcrit",fluidname)
 Pc =  CP.CoolProp.PropsSI("pcrit",fluidname)
 dc =  CP.CoolProp.PropsSI("rhocrit",fluidname)
-# data = pd.read_csv("m4.csv", ",")
-data = pd.read_csv("m6.csv", ",")
-# get P,T from 2nd and 3rd column 
-rho = P = data.iloc[:,0] 
-P = data.iloc[:,2] 
-T = data.iloc[:,3] 
+data = pd.read_csv("m4.csv", ",")
+P = data.iloc[:,6] 
+T = data.iloc[:,8] 
 print("size", P.index)
 
 G = np.zeros(P.size)
@@ -42,4 +39,4 @@ shG =pd.DataFrame({'sound': c, 'entropy': s, 'total enthalpt': ht, 'fundamental_
 newData = pd.concat([data, shG], join = 'outer', axis = 1)
 # save newData in csv file
 # newData.to_csv("m4sh.csv")
-newData.to_csv("m6new.csv")
+newData.to_csv("m4new.csv")
