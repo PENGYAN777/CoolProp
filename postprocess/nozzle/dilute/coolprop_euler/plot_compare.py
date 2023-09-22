@@ -48,5 +48,26 @@ axes.legend(loc=6) #
 # axes.set_xlim(0,120)
 # axes.set_ylim(0.2,1)
 #axes.legend(loc=2) # 2 means left top
-fig1.savefig("nozzle_di_ce_gv.pdf")
+fig1.savefig("nozzle_di_ce_gv_p.pdf")
+
+# fig 2
+fig2 = plt.figure( dpi=300)
+lwh = 2
+axes = fig2.add_axes([0.15, 0.15, 0.7, 0.7]) #size of figure
+axes.plot(m1.iloc[:,4]*1000 , m1.iloc[:,0], 'k', lw=lwh, label="n=6k")
+axes.plot(m2.iloc[:,4]*1000 , m2.iloc[:,0], 'r', lw=lwh, label="n=12k")
+axes.plot(m3.iloc[:,4]*1000 , m3.iloc[:,0], 'g', lw=lwh, label="n=22k")
+
+
+axes.set_xlabel('$X[mm]$',fontsize=12)
+#axes.set_yscale("log")
+axes.set_ylabel('Mach',fontsize=12) 
+
+axes.set_title('Mach number along centerline',fontsize=14)
+
+axes.legend(loc=6) # 
+# axes.set_xlim(0,120)
+# axes.set_ylim(0.2,1)
+#axes.legend(loc=2) # 2 means left top
+fig2.savefig("nozzle_di_ce_gv_m.pdf")
 

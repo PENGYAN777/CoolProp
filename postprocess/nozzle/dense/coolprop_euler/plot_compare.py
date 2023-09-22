@@ -81,5 +81,27 @@ axes2.set_ylim(0,3)
 axes2.legend(loc=1) # 2 means left top
 fig2.savefig("nozzle_de_ce_gv_hs.pdf")
 
+# fig 3
+fig3 = plt.figure( dpi=300)
+lwh = 2
+axes = fig3.add_axes([0.15, 0.15, 0.7, 0.7]) #size of figure
+axes.plot(m1.iloc[:,5]*1000 , m1.iloc[:,0], 'k', lw=lwh, label="n=6k")
+axes.plot(m2.iloc[:,5]*1000 , m2.iloc[:,0], 'r', lw=lwh, label="n=12k")
+axes.plot(m3.iloc[:,5]*1000 , m3.iloc[:,0], 'g', lw=lwh, label="n=22k")
+
+
+
+axes.set_xlabel('$X[mm]$',fontsize=12)
+#axes.set_yscale("log")
+axes.set_ylabel('Mach',fontsize=12) 
+axes.set_title('Mach number along centerline',fontsize=14)
+
+axes.legend(loc=0) # 
+# axes2.legend(loc=1) # 
+# axes.set_xlim(0,120)
+# axes2.set_ylim(0,2)
+#axes.legend(loc=2) # 2 means left top
+fig3.savefig("nozzle_de_ce_gv_m.pdf")
+
 
 

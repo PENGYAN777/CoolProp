@@ -43,6 +43,7 @@ axes.set_xlabel('Number of iteration',fontsize=12)
 axes.set_ylabel('Residuals',fontsize=12) 
 
 axes.set_title('History of residuals',fontsize=14)
+axes.set_xlim([0, 2000])
 
 axes.legend(loc=0) # 
 # axes.set_xlim(0,700)
