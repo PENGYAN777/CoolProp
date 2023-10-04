@@ -53,7 +53,7 @@ axes.plot(mesh6.iloc[:,-3] , mesh6.iloc[:,6]/1499900, 'b', lw=lwh, label="30k")
 
 axes.set_xlabel('$X[mm]$',fontsize=12)
 axes.set_ylabel('$P/P_t$',fontsize=12) 
-axes.set_title('$P/P_t$ along centerline',fontsize=14)
+axes.set_title('$P/P_t$ along y$=0.4 mm$',fontsize=14)
 axes.legend(loc=1) # 
 
 fig1.savefig("shock_gv_p.pdf")
@@ -76,7 +76,7 @@ axes.plot(mesh6.iloc[:,-3] , mesh6.iloc[:,2], 'b', lw=lwh, label="30k")
 
 axes.set_xlabel('$X[mm]$',fontsize=12)
 axes.set_ylabel('Mach',fontsize=12) 
-axes.set_title('Mach number along centerline',fontsize=14)
+axes.set_title('Mach number along y$=0.4 mm$',fontsize=14)
 axes.legend(loc=1) # 
 
 fig2.savefig("shock_gv_m.pdf")
