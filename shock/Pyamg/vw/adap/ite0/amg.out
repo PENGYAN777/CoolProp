@@ -1,0 +1,237 @@
+  ## WARNING: 2D MESHES PARTIALLY SUPPORTED !
+  ## WARNING: NO TETRAHEDRON
+ fefloa_Python2Mesh : 2d mesh on input 
+ fefloa_Python2Mesh : leaving with 29072 ver. 57690 tri. 452 edg. 
+  -- Maximal memory 
+  Maximum number of Points                  13200000 
+  Maximun number of Bnd Points               2640000
+  Maximum number of Triangles                5280000 
+  Maximum number of Tetrahedra              72600000 
+  Allocated Memory 12.293 Gb 
+  Physical Memory  15.371 Gb
+  bounding box x: 0 1 y: 0 1 z: 0 0 
+ amg_updateadapsurf : nsurf 1 nline 6
+       29072 Vertex 
+       29072 Boundary Vertices   
+           0 Tetrahedra   
+       57690 Triangles  
+         452 Edges  
+           1 Surface(s) 
+   0 MULTI-CONNECTED 452 OPENED EDGES DETECTED 
+  ## WARNING: GEOMETRY ENRICHMENT (CORNERS) DEACTIVATED 
+  ## WARNING: GEOMETRY ENRICHMENT (RIDGES)  DEACTIVATED 
+  Metric set to size 0.02 
+  -- Time for IOs :  real 0.036s 	 user 0.036s 	 sys  0.000s
+  ## WARNING: 2D MESHES PARTIALLY SUPPORTED !
+  Reading back mesh /home/yan/CFD/coolprop/shock/Pyamg/vw/adap/ini/amg_back.meshb
+  ## WARNING FEFLOA_BACKMESH : 4 INPUT EDGES HAVE BEEN SPLIT TO ENSURE SMOOTHNESS IN P3 CAD 
+  Reading background mesh     real 0.026s 	 user 0.022s 	 sys  0.004s
+  Maximal distance corners to corners    3.081488e-33 
+  Maximal distance lines   to lines      2.500562e-05 
+    Point 8471 localized on edge 3818 3832 
+  Maximal distance to background surface 0 
+  29072 Surface metrics interpolated from back 
+  29072 normals         interpolated from back 
+  Building Octree     real 0.030s 	 user 0.010s 	 sys  0.020s
+  Localisation        real 0.662s 	 user 0.570s 	 sys  0.092s
+    
+   Surface metric estimate 
+   Metric-growth factor      1.00000000000000     
+   no surface flagged for surface approximation 
+     
+   Recovering surface metric 
+   Metric-growth factor      1.00000000000000     
+   Minimal size on normal direction 
+   no surface flagged for surface metric recovery  
+   am_surf: end of module 
+  
+  (2) computing edge 
+  nedge       125456
+  nuref            1
+  yplus, yplusdis   -1.00000000000000       -1.00000000000000     
+  calling fields2met        29072       29072       57690           0
+   
+   
+  fields2met : setting base  
+  for hessian corrections : necor            0  npcor            0  ierro 
+           0
+   Solution min-max    1268351.08346435        1530179.92256358     
+   Hessian recovery by L2-Projection 
+   (Smooth-shock-recovery)
+   No tangent-plane mapping 
+   Recovering Gradiants/hessian cpu
+   Recovering Gradiants/hessian cpu
+   BL Hessian volume correction 
+   Computing solution metric total cpu
+   
+   
+           1   Solutions fields     
+           1   Solutions in time    
+           1   Metric-intersections 
+   Metric(s) computation total cpu
+   
+   
+  Computing surface density 
+  total air   0.869999965300476        699283.329016411     
+   Mesh-Gradation    1.20000004768372       law            3  iter. max. 
+          50  fac.   5.000000000000000E-002
+   * Mixed-Space  law gradation 
+   # proc =            1
+       76086  corrections done, size grad    1.20000004768372     
+       20505  corrections done, size grad    1.25000004768372     
+        5738  corrections done, size grad    1.30000004768372     
+        1579  corrections done, size grad    1.35000004768372     
+         363  corrections done, size grad    1.40000004768372     
+          84  corrections done, size grad    1.45000004768372     
+          14  corrections done, size grad    1.50000004768372     
+           3  corrections done, size grad    1.55000004768372     
+           0  corrections done, size grad    1.60000004768372     
+   Build LP surface metric  
+     LP norm    	2.0 
+     Complexity 	25000
+     SizeMax    	0.02   
+     Ratio-Max  	1e+10   
+     Threshold complexity (all sizes at MaxSize) 108750 
+     From pure Hessian  SizeMin 3.6763e-07	SizeMax 43320.9 	Complexity 6.35467e+06
+     From Linf          SizeMin 5.86121e-06	SizeMax 690676
+     From Lp            SizeMin 9.52578e-06	SizeMax 1095.58
+     Converging MinSize/MaxSize for Lp metric 
+     Complexity 27119.6	Error 23.7646	MinSize 9.52578e-06	MaxSize 0.02	Max-Ratio 1449.25
+     MinSize(Lp)/MinSize(Linf)	1.62522
+   Mesh gradation cpu time   real 0.512s	 user 0.511s	 sys  0.000s
+  Computing surface density 
+  total air   0.869999965300476        734477.851716961     
+           0  truncated for min size    9.999999717180685E-010
+           0  truncated for max size    1.999999955296516E-002
+   Unit length target        0.940000000000000     
+   Volume metric min size    1.027551160159338E-005
+   Volume height target      1.677984017996835E-006
+   Surface metric min size   1.027551160159338E-005
+   Surface height target     1.677984017996835E-006
+   Tet heights are controlled. Target :   1.677984017996835E-006
+   
+  -- Input mesh quality 
+  Surface quality [   1.00001352032005        23.9559404773372      ]
+          Aera    [  4.867696059129117E-009  2.144055244260971E-004 ]
+  
+  --------------------------------------- 
+ |                                       |
+ |         SURFACE MESH ADAPTATION       |
+ |                                       |
+  --------------------------------------- 
+  projcad: nboun =        29072
+  projcad: nboun =        29072  perform cad projection            0
+           1  step            0  projected            0  rejected 
+           0  points re-projected            0  rejected 
+  maximal distance  to surface   8.455206652451151E-016  point        23911
+  maximal ditstance to line      3.333559025893249E-016  point         9059
+   Surface Mesh adaptation 
+   
+   -- Geometric deviation     1.00000000000000       on cad            0
+      for face            4 =           1         114         115
+           0  un-checked face 
+  
+                                ** PHASE 1.  
+  
+       60782 in front      11906 removed          0 inserted       7294 swapped          0 rejected 
+       19745 in front       4747 removed          0 inserted       1013 swapped          0 rejected 
+        6897 in front       1622 removed          0 inserted        446 swapped          0 rejected 
+        2036 in front        480 removed          0 inserted        143 swapped          0 rejected 
+         458 in front        102 removed          0 inserted         39 swapped          0 rejected 
+          21 in front          6 removed          0 inserted          1 swapped          0 rejected 
+  
+                                ** PHASE 2.  
+  
+         334 in front          0 removed         88 inserted         79 swapped          0 rejected 
+         108 in front          0 removed         32 inserted         22 swapped          0 rejected 
+          44 in front          0 removed         20 inserted          2 swapped          0 rejected 
+          32 in front          0 removed         16 inserted          0 swapped          0 rejected 
+  
+                                ** PHASE 3.  
+  
+       26515 in front          0 removed       4195 inserted       1388 swapped       1148 rejected 
+       22704 in front          0 removed       3963 inserted        698 swapped       1186 rejected 
+       23119 in front          0 removed       4178 inserted        677 swapped        858 rejected 
+       25846 in front          0 removed       4678 inserted        751 swapped        802 rejected 
+       27262 in front          0 removed       4928 inserted        779 swapped        975 rejected 
+       20257 in front          0 removed       3664 inserted        560 swapped       1139 rejected 
+        7536 in front          0 removed       1345 inserted        223 swapped        851 rejected 
+        1297 in front          0 removed        231 inserted         44 swapped        327 rejected 
+          76 in front          0 removed         13 inserted          3 swapped         54 rejected 
+  
+     27351 inserted      18863 removed       14162 swapped           0 moved  unit  96.68%   quality         1.0         7.9  height   0.1000E+16
+  
+   -- Surface element quality
+      Maximum     7.89728084405145       Elem.        45475
+      Minimum     1.00001352032005       Elem.        56488
+      Average     1.26760320114094     
+   -- histogram 
+         1  < Q < 2               74231        99.46 %
+         2  < Q < 3                 306         0.41 %
+         3  < Q < 4                  61         0.08 %
+         4  < Q < 5                  25         0.03 %
+         5  < Q < 6                   6         0.01 %
+         6  < Q < 7                   1         0.00 %
+         7  < Q < 8                   1         0.00 %
+   Frontal Surface Mesh optimisation 
+     37062 moved     surface         1.0         5.6  0.1843E-05        11 rejected 
+     37060 moved     surface         1.0         5.8  0.9828E-06         2 rejected 
+     37060 moved     surface         1.0         6.6  0.6675E-06         0 rejected 
+     37060 moved     surface         1.0         7.6  0.5122E-06         0 rejected 
+  nswap            6  nface       305167
+  
+   Compressing data base
+   Nbr BL-tets.            0
+   npoi0        56423 nbou0      56423 nfac0     305167 nele0              0
+   npoin        37560 nboun      37560 nface      74631 nelem              0
+   
+   -- Geometric deviation     1.00000000000000       on cad            0
+      for face           11 =           5          10          14
+           0  un-checked face 
+   -- Surface element quality
+      Maximum     2.81839645386311       Elem.         6725
+      Minimum     1.00001486641726       Elem.         3880
+      Average     1.17361296691119     
+   -- histogram 
+         1  < Q < 2               74626        99.99 %
+         2  < Q < 3                   5         0.01 %
+  number of correction(s)            0
+   surface remeshing cpu time   real 4.979s	 user 4.969s	 sys  0.010s
+  
+   Compressing data base
+   Nbr BL-tets.            0
+   npoi0        37560 nbou0      37560 nfac0      74631 nele0              0
+   npoin        37560 nboun      37560 nface      74631 nelem              0
+   
+   -- Geometric deviation     1.00000000000000       on cad            0
+      for face           11 =           5          10          14
+           0  un-checked face 
+   -- Riemannian Edges length  
+      Max. R-length     1.76295788086654       Edge        21857        7751
+      Min. R-length    0.333958292082472       Edge         7669        7749
+      Average length     1.00370129128179     
+   -- Unit length edges 
+      0.71 < L < 1.41         154826        98.94 %
+   -- histogram 
+      0.20 < L < 0.50              2         0.00 %
+      0.50 < L < 0.71           1383         0.88 %
+      0.71 < L < 0.90          31788        20.31 %
+      0.90 < L < 1.11          91468        58.45 %
+      1.11 < L < 1.41          31570        20.17 %
+      1.41 < L < 2.00            278         0.18 %
+   -- Euclidean Edges length  
+      Max. E-length    2.779079163643890E-002  Edge        12648        7876
+      Min. E-length    1.064323660672273E-005  Edge        36280       32907
+   
+   -- Surface element quality
+      Maximum     2.81839645386311       Elem.         6725
+      Minimum     1.00001486641726       Elem.         3880
+      Average     1.17361296691119     
+   -- histogram 
+         1  < Q < 2               74626        99.99 %
+         2  < Q < 3                   5         0.01 %
+   
+   
+   
+  Interpolating solution on new mesh 
+ NbSensor 29072 msh->npobk 29072 NbrTyp 8 msh->npoin 37560 
