@@ -1,0 +1,352 @@
+
+-------------------------------------------------------------------------
+|    ___ _   _ ___                                                      |
+|   / __| | | |_  )   Release 7.5.1 "Blackbird"                         |
+|   \__ \ |_| |/ /                                                      |
+|   |___/\___//___|   Suite (Computational Fluid Dynamics Code)         |
+|                                                                       |
+-------------------------------------------------------------------------
+| SU2 Project Website: https://su2code.github.io                        |
+|                                                                       |
+| The SU2 Project is maintained by the SU2 Foundation                   |
+| (http://su2foundation.org)                                            |
+-------------------------------------------------------------------------
+| Copyright 2012-2023, SU2 Contributors                                 |
+|                                                                       |
+| SU2 is free software; you can redistribute it and/or                  |
+| modify it under the terms of the GNU Lesser General Public            |
+| License as published by the Free Software Foundation; either          |
+| version 2.1 of the License, or (at your option) any later version.    |
+|                                                                       |
+| SU2 is distributed in the hope that it will be useful,                |
+| but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+| Lesser General Public License for more details.                       |
+|                                                                       |
+| You should have received a copy of the GNU Lesser General Public      |
+| License along with SU2. If not, see <http://www.gnu.org/licenses/>.   |
+-------------------------------------------------------------------------
+
+Parsing config file for zone 0
+
+----------------- Physical Case Definition ( Zone 0 ) -------------------
+Compressible Euler equations.
+Mach number: 1.7.
+Angle of attack (AoA): 0 deg, and angle of sideslip (AoS): 0 deg.
+No restart solution, use the values at infinity (freestream).
+Dimensional simulation.
+The reference area is 1 m^2.
+The semi-span will be computed using the max y(3D) value.
+The reference length is 1 m.
+Input mesh file name: mesh.su2
+
+--------------- Space Numerical Integration ( Zone 0 ) ------------------
+Roe (with entropy fix = 0.001) solver for the flow inviscid terms.
+Standard Roe without low-dissipation function.
+First order integration in space.
+Gradient for upwind reconstruction: inverse-distance weighted Least-Squares.
+Gradient for viscous and source terms: inverse-distance weighted Least-Squares.
+
+--------------- Time Numerical Integration  ( Zone 0 ) ------------------
+Local time stepping (steady state simulation).
+Euler implicit method for the flow equations.
+FGMRES is used for solving the linear system.
+Using a ILU(0) preconditioning.
+Convergence criteria of the linear solver: 1e-06.
+Max number of linear iterations: 20.
+CFL adaptation. Factor down: 0.1, factor up: 2,
+                lower limit: 5, upper limit: 1e+10,
+                acceptable linear residual: 0.001.
+Courant-Friedrichs-Lewy number:        1
+
+------------------ Convergence Criteria  ( Zone 0 ) ---------------------
+Maximum number of solver subiterations: 10000.
+Begin convergence monitoring at iteration 10.
+Residual minimum value: 1e-11.
+Cauchy series min. value: 1e-10.
+Number of Cauchy elements: 100.
+Begin windowed time average at iteration 0.
+
+-------------------- Output Information ( Zone 0 ) ----------------------
+File writing frequency: 
++------------------------------------+
+|                     File| Frequency|
++------------------------------------+
+|                  RESTART|        10|
+|                 PARAVIEW|        10|
+|         SURFACE_PARAVIEW|        10|
++------------------------------------+
+Writing the convergence history file every 1 inner iterations.
+Writing the screen convergence history every 1 inner iterations.
+The tabular file format is CSV (.csv).
+Convergence history file name: history.
+Forces breakdown file name: forces_breakdown.dat.
+Surface file name: surface_flow.
+Volume file name: flow.
+Restart file name: restart_flow.dat.
+
+------------- Config File Boundary Information ( Zone 0 ) ---------------
++-----------------------------------------------------------------------+
+|                        Marker Type|                        Marker Name|
++-----------------------------------------------------------------------+
+|                         Euler wall|                                  4|
+|                                   |                                  5|
++-----------------------------------------------------------------------+
+|                     Symmetry plane|                                  2|
++-----------------------------------------------------------------------+
+|                   Riemann boundary|                                  1|
+|                                   |                                  3|
++-----------------------------------------------------------------------+
+
+-------------------- Output Preprocessing ( Zone 0 ) --------------------
+
+WARNING: SURFACE_PRESSURE_DROP can only be computed for at least 2 surfaces (outlet, inlet, ...)
+
+Screen output fields: INNER_ITER, WALL_TIME, RMS_DENSITY
+History output group(s): ITER, RMS_RES
+Convergence field(s): RMS_DENSITY
+Warning: No (valid) fields chosen for time convergence monitoring. Time convergence monitoring inactive.
+Volume output fields: COORDINATES, SOLUTION, PRIMITIVE
+
+------------------- Geometry Preprocessing ( Zone 0 ) -------------------
+Two dimensional problem.
+16724 grid points before partitioning.
+32971 volume elements before partitioning.
+5 surface markers.
+44 boundary elements in index 0 (Marker = 1).
+55 boundary elements in index 1 (Marker = 2).
+216 boundary elements in index 2 (Marker = 3).
+110 boundary elements in index 3 (Marker = 4).
+50 boundary elements in index 4 (Marker = 5).
+Executing the partitioning functions.
+Building the graph adjacency structure.
+Calling ParMETIS... graph partitioning complete (465 edge cuts).
+Distributing ParMETIS coloring.
+Rebalancing vertices.
+Rebalancing volume element connectivity.
+Rebalancing markers and surface elements.
+17194 vertices including ghost points. 
+33435 interior elements including halo cells. 
+33435 triangles.
+Establishing MPI communication patterns.
+Setting point connectivity.
+Renumbering points (Reverse Cuthill McKee Ordering).
+Recomputing point connectivity.
+Setting element connectivity.
+Checking the numerical grid orientation.
+All volume elements are correctly orientend.
+There has been a re-orientation of 230 LINE surface elements.
+Identifying edges and vertices.
+Setting the control volume structure.
+Area of the computational grid: 0.871787.
+Searching for the closest normal neighbors to the surfaces.
+Storing a mapping from global to local point index.
+Compute the surface curvature.
+Max K: 192.205. Mean K: 3.95522. Standard deviation K: 19.9693.
+Checking for periodicity.
+Computing mesh quality statistics for the dual control volumes.
++--------------------------------------------------------------+
+|           Mesh Quality Metric|        Minimum|        Maximum|
++--------------------------------------------------------------+
+|    Orthogonality Angle (deg.)|        2.67276|        89.1314|
+|     CV Face Area Aspect Ratio|        1.00594|        58.3745|
+|           CV Sub-Volume Ratio|              1|         26.712|
++--------------------------------------------------------------+
+Finding max control volume width.
+Communicating number of neighbors.
+Wetted area = 0 m.
+Area projection in the x-plane = 0 m, y-plane = 0 m.
+Max. coordinate in the x-direction = -1e+10 m, y-direction = -1e+10 m.
+Min. coordinate in the x-direction = 1e+10 m, y-direction = 1e+10 m.
+Checking if Euler & Symmetry markers are straight/plane:
+Boundary marker 4 is NOT a single straight.
+Boundary marker 5 is NOT a single straight.
+Boundary marker 2 is a single straight.
+Computing wall distances.
+
+-------------------- Solver Preprocessing ( Zone 0 ) --------------------
+Inviscid flow: Computing density based on free-stream
+temperature and pressure using the ideal gas law.
+Force coefficients computed using free-stream values.
+
+-- Models:
++------------------------------------------------------------------------------+
+|          Viscosity Model|        Conductivity Model|              Fluid Model|
++------------------------------------------------------------------------------+
+|                        -|                         -|         CoolProp library|
++------------------------------------------------------------------------------+
+-- Fluid properties:
++------------------------------------------------------------------------------+
+|                  Name|    Dim. value|    Ref. value|      Unit|Non-dim. value|
++------------------------------------------------------------------------------+
+|          Gas Constant|       35.1516|             1|  N.m/kg.K|       35.1516|
+|      Spec. Heat Ratio|             -|             -|         -|             -|
+|     Critical Pressure|   1.41004e+06|             1|          |   1.41004e+06|
+|  Critical Temperature|        564.09|             1|         K|        564.09|
++------------------------------------------------------------------------------+
+-- Initial and free-stream conditions:
++------------------------------------------------------------------------------+
+|                  Name|    Dim. value|    Ref. value|      Unit|Non-dim. value|
++------------------------------------------------------------------------------+
+|       Static Pressure|    1.4999e+06|             1|        Pa|    1.4999e+06|
+|               Density|       202.888|             1|    kg/m^3|       202.888|
+|           Temperature|       569.844|             1|         K|       569.844|
+|          Total Energy|        369670|             1|   m^2/s^2|        369670|
+|            Velocity-X|       85.2978|             1|       m/s|       85.2978|
+|            Velocity-Y|             0|             1|       m/s|             0|
+|    Velocity Magnitude|       85.2978|             1|       m/s|       85.2978|
++------------------------------------------------------------------------------+
+|           Mach Number|             -|             -|         -|           1.7|
++------------------------------------------------------------------------------+
+Initialize Jacobian structure (Euler). MG level: 0.
+
+------------------- Numerics Preprocessing ( Zone 0 ) -------------------
+
+----------------- Integration Preprocessing ( Zone 0 ) ------------------
+
+------------------- Iteration Preprocessing ( Zone 0 ) ------------------
+Euler/Navier-Stokes/RANS fluid iteration.
+
+------------------------------ Begin Solver -----------------------------
+
+Simulation Run using the Single-zone Driver
++--------------------------------------+
+|  Inner_Iter|   Time(sec)|    rms[Rho]|
++--------------------------------------+
+|           0|  4.2575e-01|    0.532964|
+|           1|  4.2716e-01|    0.448372|
+|           2|  4.3020e-01|    0.244818|
+|           3|  4.3042e-01|    0.107056|
+|           4|  4.3154e-01|   -0.016383|
+|           5|  4.3445e-01|   -0.224602|
+|           6|  4.3761e-01|   -0.490997|
+|           7|  4.4124e-01|   -0.741220|
+|           8|  4.4439e-01|   -0.841490|
+|           9|  4.4587e-01|   -1.013233|
+|          10|  4.4728e-01|   -1.300199|
++-----------------------------------------------------------------------+
+|        File Writing Summary       |              Filename             |
++-----------------------------------------------------------------------+
+|SU2 binary restart                 |restart_flow.dat                   |
+|Paraview                           |flow.vtu                           |
+|Paraview surface                   |surface_flow.vtu                   |
++-----------------------------------------------------------------------+
++--------------------------------------+
+|  Inner_Iter|   Time(sec)|    rms[Rho]|
++--------------------------------------+
+|          11|  4.5073e-01|   -1.356706|
+|          12|  4.5139e-01|   -1.393920|
+|          13|  4.5199e-01|   -1.433528|
+|          14|  4.5231e-01|   -1.446675|
+|          15|  4.5264e-01|   -1.463049|
+|          16|  4.5290e-01|   -1.485403|
+|          17|  4.5325e-01|   -1.507721|
+|          18|  4.5350e-01|   -1.551506|
+|          19|  4.5369e-01|   -1.562851|
+|          20|  4.5408e-01|   -1.575857|
++-----------------------------------------------------------------------+
+|        File Writing Summary       |              Filename             |
++-----------------------------------------------------------------------+
+|SU2 binary restart                 |restart_flow.dat                   |
+|Paraview                           |flow.vtu                           |
+|Paraview surface                   |surface_flow.vtu                   |
++-----------------------------------------------------------------------+
++--------------------------------------+
+|  Inner_Iter|   Time(sec)|    rms[Rho]|
++--------------------------------------+
+|          21|  4.5460e-01|   -1.589102|
+|          22|  4.5467e-01|   -1.622320|
+|          23|  4.5482e-01|   -1.632180|
+|          24|  4.5513e-01|   -1.644284|
+|          25|  4.6121e-01|   -1.659788|
+|          26|  4.6615e-01|   -1.680338|
+|          27|  4.6857e-01|   -1.752778|
+|          28|  4.7167e-01|   -1.772025|
+|          29|  4.7468e-01|   -1.793589|
+|          30|  4.7742e-01|   -1.820300|
++-----------------------------------------------------------------------+
+|        File Writing Summary       |              Filename             |
++-----------------------------------------------------------------------+
+|SU2 binary restart                 |restart_flow.dat                   |
+|Paraview                           |flow.vtu                           |
+|Paraview surface                   |surface_flow.vtu                   |
++-----------------------------------------------------------------------+
++--------------------------------------+
+|  Inner_Iter|   Time(sec)|    rms[Rho]|
++--------------------------------------+
+|          31|  4.8034e-01|   -1.875835|
+|          32|  4.8280e-01|   -1.890918|
+|          33|  4.8501e-01|   -1.907716|
+|          34|  4.8717e-01|   -1.930947|
+|          35|  4.8914e-01|   -1.962639|
+|          36|  4.9107e-01|   -2.075799|
+|          37|  4.9282e-01|   -2.099281|
+|          38|  4.9449e-01|   -2.128693|
+|          39|  4.9607e-01|   -2.183285|
+|          40|  5.0464e-01|   -2.287510|
++-----------------------------------------------------------------------+
+|        File Writing Summary       |              Filename             |
++-----------------------------------------------------------------------+
+|SU2 binary restart                 |restart_flow.dat                   |
+|Paraview                           |flow.vtu                           |
+|Paraview surface                   |surface_flow.vtu                   |
++-----------------------------------------------------------------------+
++--------------------------------------+
+|  Inner_Iter|   Time(sec)|    rms[Rho]|
++--------------------------------------+
+|          41|  5.1358e-01|   -2.509466|
+|          42|  5.1470e-01|   -2.927812|
+|          43|  5.1575e-01|   -3.551368|
+|          44|  5.1678e-01|   -4.317657|
+|          45|  5.1749e-01|   -5.148897|
+|          46|  5.1783e-01|   -6.000344|
+|          47|  5.1812e-01|   -6.857947|
+|          48|  5.1839e-01|   -7.718213|
+|          49|  5.1914e-01|   -8.579848|
+|          50|  5.1994e-01|   -9.442247|
++-----------------------------------------------------------------------+
+|        File Writing Summary       |              Filename             |
++-----------------------------------------------------------------------+
+|SU2 binary restart                 |restart_flow.dat                   |
+|Paraview                           |flow.vtu                           |
+|Paraview surface                   |surface_flow.vtu                   |
++-----------------------------------------------------------------------+
++--------------------------------------+
+|  Inner_Iter|   Time(sec)|    rms[Rho]|
++--------------------------------------+
+|          51|  5.2083e-01|  -10.305090|
+|          52|  5.2222e-01|  -11.168314|
+
+----------------------------- Solver Exit -------------------------------
+All convergence criteria satisfied.
++-----------------------------------------------------------------------+
+|      Convergence Field     |     Value    |   Criterion  |  Converged |
++-----------------------------------------------------------------------+
+|                    rms[Rho]|      -11.1683|         < -11|         Yes|
++-----------------------------------------------------------------------+
+-------------------------------------------------------------------------
++-----------------------------------------------------------------------+
+|        File Writing Summary       |              Filename             |
++-----------------------------------------------------------------------+
+|SU2 binary restart                 |restart_flow.dat                   |
+|Paraview                           |flow.vtu                           |
+|Paraview surface                   |surface_flow.vtu                   |
++-----------------------------------------------------------------------+
+
+------------------------- Solver Postprocessing -------------------------
+Deleted CNumerics container.
+Deleted CIntegration container.
+Deleted CSolver container.
+Deleted CIteration container.
+Deleted CInterface container.
+Deleted CGeometry container.
+Deleted CFreeFormDefBox class.
+Deleted CSurfaceMovement class.
+Deleted CVolumetricMovement class.
+Deleted CConfig container.
+Deleted nInst container.
+Deleted COutput class.
+-------------------------------------------------------------------------
+
+------------------------- Exit Success (SU2_CFD) ------------------------
+

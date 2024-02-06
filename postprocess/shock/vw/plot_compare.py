@@ -35,7 +35,7 @@ m4new = pd.read_csv("prnew.csv", ",", skiprows=0)
 
 
 
-Pc = 1410044*1.0035
+Pc = 1410044
 P1 = 1499900
 dc = 256.74
 Tc = 564.09
@@ -47,7 +47,7 @@ axes.plot(mesh3.iloc[:,-3] , mesh3.iloc[:,6]/Pc, 'k', lw=lwh, label="5k")
 axes.plot(mesh4.iloc[:,-3] , mesh4.iloc[:,6]/Pc, 'r', lw=lwh, label="12k")
 axes.plot(mesh5.iloc[:,-3] , mesh5.iloc[:,6]/Pc, 'g', lw=lwh, label="18k")
 axes.plot(mesh6.iloc[:,-3] , mesh6.iloc[:,6]/Pc, 'b', lw=lwh, label="30k")
-
+axes.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
 # sub_axes = plt.axes([0.26, 0.26, 0.25, 0.25]) 
 
 # # sub_axes.plot(m6new.iloc[:,6] , m6new.iloc[:,-3], 'k', lw=lwh, label="$s$")
