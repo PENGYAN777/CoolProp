@@ -20,13 +20,14 @@ print("Universal gas constant:", R)
 MW = CP.CoolProp.PropsSI('M',fluidname)
 # print("molar mass:", MW)
 Rs = R/MW
-p = 859371
-t = 621.72
-d = 112.8
-g = 1.0125
+p = Pc*0.66
+t = Tc*0.98
+d = dc*0.24
+g = 1.01
 a = 27*Rs*Rs*Tc*Tc/64/Pc
 b = 1/8*Rs*Tc/Pc
-cv = CP.CoolProp.PropsSI('CVMASS','T', t, 'P',p,  fluidname)
+# cv = CP.CoolProp.PropsSI('CVMASS','T', t, 'P',p,  fluidname)
+cv = 2093
 N = 2*cv/Rs
 # N = 120
 v = 1/d
