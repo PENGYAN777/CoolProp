@@ -63,5 +63,5 @@ axes.set_ylabel('Time (normalized)',fontsize=12)
 axes.set_title('Computational time with different grids',fontsize=14)
 axes.legend(loc=0) # 
 
-fig1.savefig("scalable_grid.pdf")
+fig1.savefig("scalable_grid.png")
 

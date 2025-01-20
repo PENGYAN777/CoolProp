@@ -43,11 +43,11 @@ axes.set_xlabel('Number of iteration',fontsize=12)
 axes.set_ylabel('Residuals',fontsize=12) 
 
 axes.set_title('History of residuals',fontsize=14)
-# axes.set_xlim([0, 2000])
+# axes.set_xlim([0, 80])
 
 axes.legend(loc=0) # 
 # axes.set_xlim(0,700)
 # axes.set_ylim(-12,3)
 #axes.legend(loc=2) # 2 means left top
-fig1.savefig("non_residual.pdf")
+fig1.savefig("shock_residual.pdf")
 
