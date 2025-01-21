@@ -45,7 +45,7 @@ axes.set_ylabel('Residuals',fontsize=12)
 axes.set_title('History of residuals',fontsize=14)
 # axes.set_xlim([0, 80])
 
-axes.legend(loc=0) # 
+axes.legend(loc=1) # 
 # axes.set_xlim(0,700)
 # axes.set_ylim(-12,3)
 #axes.legend(loc=2) # 2 means left top
